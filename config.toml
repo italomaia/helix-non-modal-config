@@ -1,0 +1,114 @@
+# Configuration goals: 
+# - change modes as little as possible
+# - decrease the amount of shortcuts you need to master
+# - everyday use-cases have priority
+
+# suggested themes: 
+# - ayu_mirage
+# - catppuccin_macchiato
+# - gruvbox_light
+# - hex_toxic
+# - material_deep_ocean
+# - material_palenight
+# - monokai_pro_octagon
+# - new_moon
+# - nightfox
+# - serika-dark
+# - yellowed
+
+theme = "nightfox"
+
+[editor]
+bufferline = "always"
+line-number = "relative"
+rulers = [120]
+scroll-lines = 1
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.whitespace.characters]
+tabpad = "·"
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "block"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = ["diagnostics"]
+right = ["selections", "register", "position", "file-encoding"]
+
+[keys.normal] # do not sort!
+esc = ["collapse_selection", "keep_primary_selection"] # deselect all; keep primary cursor only
+tab = "goto_next_function" # select and jump to the next function via Treesitter
+S-tab = "goto_prev_function" # select and jump to the previous function via Treesitter 
+end = "goto_line_end_newline" # stop at linebreak; this is more useful
+C-end = "goto_line_end" # stop at last character
+del = ["move_next_word_end", "move_prev_word_end", "move_next_word_end", "delete_selection_noyank"] # delete current word
+C-del = "toggle_comments" # kind of delete, but not really =D
+# C-backspace cannot be mapped
+backspace = ["delete_char_backward"] # counterpart for `d`
+A-backspace = ["move_prev_word_start", "delete_selection"] # delete word barckwards
+
+j = "save_selection" # add to jumplist; a waste to not use `j` to save jump positions
+k = "jump_backward" # prev jump item
+l = "jump_forward" # next jump item
+
+p = "paste_before" # switched with P
+P = "paste_after" # switched with p
+
+C-left = ["move_prev_word_start", "collapse_selection"] # move cursor one word left
+C-right = ["move_next_word_end", "collapse_selection"] # move cursor one word right
+C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"] # move line down
+C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # moves line up
+
+# C-w changes mode; we leave it alone
+w = ["move_next_word_end", "move_prev_word_start", "move_next_word_end"] # select word under cursor
+W = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_word_end"] # select WORD under cursor
+
+o = ["open_below", "normal_mode"] # do not leave normal mode
+O = ["open_above", "normal_mode"] # do not leave normal mode
+C-s = ":w" # save
+D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"] # delete from current position until EOL
+X = "extend_line_above" # select line; if selected, select above line
+C-x = ["ensure_selections_forward", "extend_to_line_end"] # select from current to EOL
+C-q = ":q" # quit
+A-q = ":q!" # force quit
+
+a = "switch_to_lowercase" # `
+A = "switch_to_uppercase" # A-`
+C-a = "switch_case"
+C = ["move_next_word_end", "delete_selection", "insert_mode"] # replace word
+C-v = "paste_clipboard_before" # paste from clipboard
+C-c = "yank_to_clipboard" # copy to clipboard
+
+# space mode mapping
+space.p = "paste_clipboard_before" # switched with P
+space.P = "paste_clipboard_after" # switched with p
+
+[keys.insert]
+C-c = "yank_to_clipboard" # copy to clipboard
+C-del = ["move_next_word_start", "delete_selection"] # delete next word
+C-d = ["delete_selection"] # delete selection
+C-o = ["open_above"] # in-place, new line
+C-p = ["paste_before"] # map:P
+C-s = ["normal_mode",":w"] # save file
+C-space = ["completion"]
+C-v = ["paste_clipboard_before"]
+C-u = ["undo"]
+A-u = ["redo"]
+C-e = ["move_next_word_start"] # move to next word
+A-e = ["move_next_long_word_start"] # move to next WORD 
+C-x = ["extend_line_below"] # map:X
+A-x = ["extend_line_above"] # map:x
+C-y = ["yank"] # yank selection to register
+C-w = ["move_next_word_end", "move_prev_word_end", "move_next_word_end"] # select word under cursor
+A-w = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_word_end"] # select WORD under cursor
+
+C-left = ["move_prev_word_start"] # jump and select word left
+C-right = ["move_next_word_end"] # jump and select word right
+C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "move_line_up"] # moves line up
+C-down = ["extend_to_line_bounds", "delete_selection", "paste_after", "move_line_down"] # move line down
+
+[keys.select]
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # go to the simplest scenario!
