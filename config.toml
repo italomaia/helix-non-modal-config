@@ -59,8 +59,8 @@ P = "paste_after" # switched with p
 
 C-left = ["move_prev_word_start", "collapse_selection"] # move cursor one word left
 C-right = ["move_next_word_end", "collapse_selection"] # move cursor one word right
-C-down = ["extend_to_line_bounds", "delete_selection", "paste_after"] # move line down
-C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # moves line up
+A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"] # move line down; like vscode
+A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"] # moves line up; like vscode
 
 # C-w changes mode; we leave it alone
 w = ["move_next_word_end", "move_prev_word_start", "move_next_word_end"] # select word under cursor
@@ -107,8 +107,8 @@ A-w = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_w
 
 C-left = ["move_prev_word_start"] # jump and select word left
 C-right = ["move_next_word_end"] # jump and select word right
-C-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "move_line_up"] # moves line up
-C-down = ["extend_to_line_bounds", "delete_selection", "paste_after", "move_line_down"] # move line down
+A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "move_line_up"] # moves line up; like vscode
+A-down = ["extend_to_line_bounds", "delete_selection", "paste_after", "move_line_down"] # move line down; like vscode
 
 [keys.select]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"] # go to the simplest scenario!
