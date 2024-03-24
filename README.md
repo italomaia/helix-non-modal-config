@@ -1,26 +1,28 @@
-# My Helix Config
+# Helix Non-Modal Config
 
-I was never a big fan of editors like vim and vi, as you need to remember just too many
-commands and build too much muscle memory to be able to use them effectively. Recently
-neovim came around, trying to level the field and make the text based experience a bit
-friendlier. And now there is (Helix)[https://github.com/helix-editor/helix/].
+I was never a big fan of editors like [vim](https://www.vim.org/) as they push you to build just too much muscle memory 
+to be able to use them effectively. Recently neovim came around, trying to level the field 
+and make the text based experience a bit friendlier. And now there is (Helix)[https://github.com/helix-editor/helix/].
 
-It fields friendly, adds some neat ideas that remind me of the (howl editor)[https://github.com/howl-editor/howl],
-another project I like and kind of did pick my interest.
+It has some neat ideas that remind me of the (howl editor)[https://github.com/howl-editor/howl],
+another project I enjoy, like the way it actively tries to help you do the right thing with auto-complete
+suggestions as you type.
 
-After giving it a few hours, I can say the experience is interesting and I can see
-myself being productive with it, but not how it currently is. It is too bound to
-the idea of not moving your hands around, which is not a big deal for me, which
-translates into key mappings that few a bit unnatural to my taste.
+After giving it a few hours, it is clear to me the experience is interesting and I can see
+myself being productive with it, but not how it currently is. The amount of mode switching
+is just too high at the moment! I need to keep my eyes constantly at the bottom-left corner
+to track which mode is active and which set of key-bindings do I need to have in my mind's
+buffer.
 
-## The idea
+## The Idea
 
-This project is just a place to store the configuration that works for me, and other
-people might find interesting or useful. In general, it brings me the following benefits:
+This project is just a place to store the configuration makes me the most productive with Helix, which translates
+to the following:
 
-- I can just copy paste it, when needed
-- allows me to do tasks without changing modes too much
-- keymap feels more natural to a GUI user such as myself
+- one should have to remember as few key-bindings as possible
+- modes should be switched as little as possible 
+- keymap feels more natural: the most common behavior should have the simpler binding
+- keybinding between modes is kind of similar
 
-If you find this, give it a try. Most keymaps have a description either telling what
+If this ressonates with you, give it a try. Most keymaps have a description either telling what
 they do or why they exist.
