@@ -66,8 +66,8 @@ A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befo
 w = ["move_next_word_end", "move_prev_word_start", "move_next_word_end"] # select word under cursor
 W = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_word_end"] # select WORD under cursor
 
-o = ["open_below", "normal_mode"] # do not leave normal mode
-O = ["open_above", "normal_mode"] # do not leave normal mode
+o = ["open_above", "normal_mode"] # do not leave normal mode
+O = ["open_below", "normal_mode"] # do not leave normal mode
 C-s = ":w" # save
 D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"] # delete from current position until EOL
 X = "extend_line_above" # select line; if selected, select above line
