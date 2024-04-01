@@ -29,9 +29,9 @@ gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 tabpad = "·"
 
 [editor.cursor-shape]
-insert = "block"
+insert = "bar"
 normal = "block"
-select = "block"
+select = "underline"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
