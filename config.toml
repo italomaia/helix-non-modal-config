@@ -88,6 +88,7 @@ space.P = "paste_clipboard_after" # switched with p
 
 [keys.insert]
 A-e = ["move_next_long_word_start"] # move to next WORD 
+A-q = [":q!"]
 A-u = ["redo"]
 A-w = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_word_end"] # select WORD under cursor
 A-x = ["extend_line_above"] # map:x
@@ -97,6 +98,7 @@ C-del = ["move_next_word_start", "delete_selection"] # delete next word
 C-e = ["move_next_word_start"] # move to next word
 C-o = ["open_above"] # in-place, new line
 C-p = ["paste_before"] # map:P
+C-q = [":q"]
 C-s = ["normal_mode",":w"] # save file
 C-space = ["completion"]
 C-u = ["undo"]
