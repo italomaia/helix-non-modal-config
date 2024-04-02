@@ -87,23 +87,23 @@ space.p = "paste_clipboard_before" # switched with P
 space.P = "paste_clipboard_after" # switched with p
 
 [keys.insert]
+A-e = ["move_next_long_word_start"] # move to next WORD 
+A-u = ["redo"]
+A-w = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_word_end"] # select WORD under cursor
+A-x = ["extend_line_above"] # map:x
 C-c = "yank_to_clipboard" # copy to clipboard
-C-del = ["move_next_word_start", "delete_selection"] # delete next word
 C-d = ["delete_selection"] # delete selection
+C-del = ["move_next_word_start", "delete_selection"] # delete next word
+C-e = ["move_next_word_start"] # move to next word
 C-o = ["open_above"] # in-place, new line
 C-p = ["paste_before"] # map:P
 C-s = ["normal_mode",":w"] # save file
 C-space = ["completion"]
-C-v = ["paste_clipboard_before"]
 C-u = ["undo"]
-A-u = ["redo"]
-C-e = ["move_next_word_start"] # move to next word
-A-e = ["move_next_long_word_start"] # move to next WORD 
-C-x = ["extend_line_below"] # map:X
-A-x = ["extend_line_above"] # map:x
-C-y = ["yank"] # yank selection to register
+C-v = ["paste_clipboard_before"]
 C-w = ["move_next_word_end", "move_prev_word_end", "move_next_word_end"] # select word under cursor
-A-w = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_word_end"] # select WORD under cursor
+C-x = ["extend_line_below"] # map:X
+C-y = ["yank"] # yank selection to register
 
 C-left = ["move_prev_word_start"] # jump and select word left
 C-right = ["move_next_word_end"] # jump and select word right
