@@ -1,0 +1,7 @@
+[[language]]
+name = "python"
+
+[language.formatter]
+# sudo apt-get install python3-pylsp-black
+command = "black"
+args = ["--line-length", "120", "--quiet"]
