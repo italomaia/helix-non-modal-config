@@ -107,6 +107,12 @@ C-w = ["move_next_word_end", "move_prev_word_end", "move_next_word_end"] # selec
 C-x = ["extend_line_below"] # map:X
 C-y = ["yank"] # yank selection to register
 
+# moving the cursor with arrows, remove selection
+left = ["collapse_selection", "move_char_left"]
+right = ["collapse_selection", "move_char_right"]
+up = ["collapse_selection", "move_line_up"]
+down = ["collapse_selection", "move_line_down"]
+
 C-left = ["move_prev_word_start"] # jump and select word left
 C-right = ["move_next_word_end"] # jump and select word right
 A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "move_line_up"] # moves line up; like vscode
