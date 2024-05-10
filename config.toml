@@ -19,6 +19,7 @@
 theme = "nightfox"
 
 [editor]
+true-color = true
 bufferline = "always"
 line-number = "relative"
 rulers = [120]
