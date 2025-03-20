@@ -26,3 +26,9 @@ to the following:
 
 If this ressonates with you, give it a try. Most keymaps have a description either telling what
 they do or why they exist.
+
+## Installation
+
+Given you have helix and curl installed:
+
+`curl https://raw.githubusercontent.com/italomaia/helix-non-modal-config/refs/heads/main/config.toml -o ~/.config/helix/`
