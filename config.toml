@@ -81,7 +81,7 @@ A = "switch_to_uppercase" # A-`
 C-a = "switch_case"
 C = ["move_next_word_end", "delete_selection", "insert_mode"] # replace word
 C-v = "paste_clipboard_before" # paste from clipboard
-C-c = "yank_to_clipboard" # copy to clipboard
+A-y = "yank_to_clipboard" # copy to clipboard
 
 # space mode mapping
 space.p = "paste_clipboard_before" # switched with P
@@ -93,7 +93,8 @@ A-q = [":q!"]
 A-u = ["redo"]
 A-w = ["move_next_long_word_end", "move_prev_long_word_start", "move_next_long_word_end"] # select WORD under cursor
 A-x = ["extend_line_above"] # map:x
-C-c = "yank_to_clipboard" # copy to clipboard
+A-y = ["yank_to_clipboard"] # copy to clipboard
+
 C-d = ["delete_selection"] # delete selection
 C-del = ["move_next_word_start", "delete_selection"] # delete next word
 C-e = ["move_next_word_start"] # move to next word
@@ -106,7 +107,7 @@ C-u = ["undo"]
 C-v = ["paste_clipboard_before"]
 C-w = ["move_next_word_end", "move_prev_word_end", "move_next_word_end"] # select word under cursor
 C-x = ["extend_line_below"] # map:X
-C-y = ["yank"] # yank selection to register
+C-y = ["yank"] # copy to register
 
 # moving the cursor with arrows, remove selection
 left = ["collapse_selection", "move_char_left"]
