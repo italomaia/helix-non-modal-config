@@ -31,4 +31,4 @@ they do or why they exist.
 
 Given you have helix and curl installed:
 
-`curl https://raw.githubusercontent.com/italomaia/helix-non-modal-config/refs/heads/main/config.toml -o ~/.config/helix/`
+`mkdir -p ~/.config/helix && curl https://raw.githubusercontent.com/italomaia/helix-non-modal-config/refs/heads/main/config.toml -o ~/.config/helix/config.toml`
